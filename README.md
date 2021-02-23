@@ -17,15 +17,19 @@
         npm install
         npm run dev
         php artisan migrate
+        php artisan storage:link
+        db:seed
     To run the project:
         php artisan serve
         npm run dev
 ## Laravel Nova
 
-    Laravel Nova is used for the administration panel.
+    Laravel Nova is used for the administration panel. To install the package you need to login with your Nova credentials.
 
 ## Generate an admin user
 
+    Before creating users/admins it is necesarry to create the roles. Run the command db:seed !
+        Make sure that the names are camelcase 'Admin' and 'User'
     To create an admin, use the command
         php artisan nova:user 
     in you terminal and follow the instructions prompted. After successful user creation, you can login as an administrator at 127.0.0.1:8000/nova.
